@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  --primary-color: #a21047;
+  --secondary-color: #1c3fa8;
+  --dark-color: #343a40;
+  --light-color: #fff;
+  --hover-color: #e00d5c;
+  --gradient-color: linear-gradient(to right, #ee9ca7, #ffdde1);
+  font-size: 62.5%;
+}
+
+.center {
+  text-align: center;
+}
+/* client section */
+.partner-ser {
+  height: 100vh;
+  padding: 90px 20px 40px;
+  background: var(--gradient-color);
+}
+.brands-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.carousel {
+  background: transparent;
+}
+.gallery-cell {
+  width: 100%;
+  /* half-width */
+  height: auto;
+  padding: 0 15px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 548px) {
+  .gallery-cell {
+    width: 33.3%;
+  }
+}
+.gallery-cell.is-selected img {
+  transform: scale(1);
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+}
+.gallery-cell img {
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* easeInOutBack */
+  max-width: 150px;
+  display: inline-block;
+  transform: scale(0.7);
+  -webkit-filter: grayscale(100%) blur(2px);
+  filter: grayscale(100%) blur(2px);
+}
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+.brand-carousel {
+  margin: 0 60px;
+  /* space for prev/next buttons */
+}
+.flickity-prev-next-button .arrow {
+  fill: var(--dark-color);
+  box-shadow: 0 0 5px black;
+}
+.flickity-prev-next-button.no-svg {
+  color: var(--dark-color);
+}
+.flickity-prev-next-button {
+  background: transparent;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* button */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+.btn:hover {
+  transform: scale(0.98);
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  background: var(--hover-color);
+}
+
+/* heading and its style */
+h2 {
+  font-weight: 700;
+  font-size: 38px;
+  text-align: center;
+  line-height: 1.33;
+  margin-bottom: 89px;
+  color: var(--dark-color);
+}
+.heading-main {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 25px;
+  color: inherit;
+  font-weight: 600;
+  border-bottom: 5px solid var(--dark-color);
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 0px;
+  bottom: -5px;
+  background: var(--hover-color);
+  height: 5px;
+  transition-property: width;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.link:focus::after,
+.link:hover::after {
+  left: 0px;
+  right: auto;
+  width: 100%;
+}
