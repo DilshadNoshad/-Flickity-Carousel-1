@@ -22,7 +22,7 @@ html {
 .partner-ser {
   height: 100vh;
   padding: 90px 20px 40px;
-  background: var(--gradient-color);
+  background: var(--light-color);
 }
 .brands-wrap {
   max-width: 960px;
